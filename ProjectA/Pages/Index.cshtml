@@ -1,0 +1,16 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.ViewEngines;
+@inject ICompositeViewEngine ViewEngine
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if (ViewEngine.FindView(ViewContext, "/Pages/Customer/Information.cshtml", isMainPage: false).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+</div>
