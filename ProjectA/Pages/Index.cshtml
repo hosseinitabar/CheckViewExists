@@ -13,4 +13,32 @@
     {
         <h1>Hey, view found!</h1>
     }
+    @if (ViewEngine.FindView(ViewContext, "/Pages/Customer/Information", isMainPage: false).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+    @if (ViewEngine.FindView(ViewContext, "/Pages/Customer/Information.cshtml", isMainPage: true).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+    @if (ViewEngine.FindView(ViewContext, "/Pages/Customer/Information", isMainPage: true).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+    @if (ViewEngine.FindView(ViewContext, "Pages_Customer_Information.cshtml", isMainPage: false).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+    @if (ViewEngine.FindView(ViewContext, "Pages_Customer_Information", isMainPage: false).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+    @if (ViewEngine.FindView(ViewContext, "Pages_Customer_Information.cshtml", isMainPage: true).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
+    @if (ViewEngine.FindView(ViewContext, "Pages_Customer_Information", isMainPage: true).Success)
+    {
+        <h1>Hey, view found!</h1>
+    }
 </div>
